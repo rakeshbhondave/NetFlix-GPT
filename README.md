@@ -3,9 +3,17 @@
  - configured the Tailwind CSS in app 
  - Created the structure and basic components
  - Installed router dom :  npm i -D react-router-dom
+ - Implemented Routing
  - Header
  - Login/SignIn Form 
  - SignUp form 
+ - Form Validation
+ - useRef hook
+ - Firebase setup 
+ - Deloying our app to production
+ - Create sign up User Account
+ 
+ 
 
 
  # FEATURES :  
