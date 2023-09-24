@@ -32,8 +32,16 @@
  - fetched the trailer video 
  - Update the store with trailer video 
  - Embed a youtube video. 
- - Make t autiplay and mute. 
- - Make Title for main container 
+ - Make youtube autoplay and mute audio. 
+ - Make Title for main container
+ - Tailwind css for main nd secondary component
+ - Build Movie list 
+ - Build Movie card
+ - TMDB image CDN URL
+ - Made the Browse page amaxing with tailwing css 
+ - Made usePopularMovies custom hook 
+ 
+
  
  
 
