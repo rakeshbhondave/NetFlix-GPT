@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { signOut } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import {addUser , removeUser} from "../utils/userSlice";
 import SignOut from "../utils/sign-out.png";
 import Logo from "../utils/Netflix_Logo_PMS.png";
+import { toggleGptSearchView } from '../utils/gptSlice';
 
 
 const Header = () => {
@@ -15,6 +16,8 @@ const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store => store.user));
   const dispatch = useDispatch();
+
+  const [searchGPT, setSearchGPT] = useState(false);
 
   const handleSignOut = () => {
     signOut(auth).then(() => {
@@ -25,6 +28,11 @@ const Header = () => {
       navigate("/error");
   // An error happened.
     });
+  }
+
+  const toggleEvent = () => {
+     dispatch(toggleGptSearchView());
+     setSearchGPT(!searchGPT);
   }
    
   useEffect(() => {
@@ -55,10 +63,12 @@ const Header = () => {
           alt='header-logo'
         />
     </div>
-    { user && <div className='py-5 px-5 text-white' >
-     <span>
+    { user && <div className='py-5 px-5 text-white flex' >
+    <button className='flex font-bold p-2 px-8 mt-0 mr-16 bg-purple-600 hover:bg-purple-900' onClick={toggleEvent}>{!searchGPT ? "NetflixGPT" : "Browse"} </button>
+        
+    
+     <span className='flex'> {"Hello..  " +user.displayName} 
     <button className='flex' onClick={handleSignOut}>
-    {"Hello..  " +user.displayName} 
         <img className='w-40'
           src= {SignOut}
           alt='sign-out'
