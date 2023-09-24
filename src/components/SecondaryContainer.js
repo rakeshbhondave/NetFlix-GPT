@@ -15,7 +15,7 @@ function SecondaryContainer() {
 
       <MovieList title={"Popular Movies"} movies={movies.popularMovies}/>
 
-      <MovieList title={"Upcoming Movies"} movies={movies.nowPlayingMovies}/>
+      <MovieList title={"Upcoming Movies"} movies={movies.upComingMovies}/>
       </div>
     </div>
   )

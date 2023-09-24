@@ -5,6 +5,7 @@ import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import usePopularMovies from '../custom-hooks/usePopularMovies';
 import useTrendingMovies from '../custom-hooks/useTrendingMovies';
+import useUpcomingMovies from '../custom-hooks/useUpcomingMovies';
 
 
 const Browse = () => {
@@ -12,6 +13,7 @@ const Browse = () => {
   useNowPlayingMovies();
   usePopularMovies();
   useTrendingMovies();
+  useUpcomingMovies();
 
   return (
     <div>
