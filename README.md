@@ -12,6 +12,28 @@
  - Firebase setup 
  - Deloying our app to production
  - Create sign up User Account
+ - Implement Sign In user API 
+ - Implement Sign Up user API 
+ - Created redux store with userSlice 
+ - Implemented Sign Out feature
+ - Update profile api call 
+ - Fetch movies from tmdb Api 
+ - Bug Fix : display name and profileURL fix with dispatch 
+ - Bug Fix : If the user is not logged in don't redirect to browse page 
+ - Unsubscribe to the onAuthStateChanged callback 
+ - Add images in utils
+ - Add urls in constants.js file 
+ - register on tmdb api and get acces token key 
+ - Get an api for getting now playing movies.  
+ - Created custom hook for now playing movies 
+ - Updated the store with mpvies data 
+ - Create a moviesSlice 
+ - Planning for main container and Secondary container 
+ - fetched the trailer video 
+ - Update the store with trailer video 
+ - Embed a youtube video. 
+ - Make t autiplay and mute. 
+ - Make Title for main container 
  
  
 
