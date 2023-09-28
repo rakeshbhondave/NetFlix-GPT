@@ -40,6 +40,10 @@
  - TMDB image CDN URL
  - Made the Browse page amaxing with tailwing css 
  - Made usePopularMovies custom hook 
+ - Made otherMovuies custom hooks 
+ - Made GPT Search bar 
+ - Made GPT search page 
+ - IMP Feature: Added languages with redux store.  
  
 
  
