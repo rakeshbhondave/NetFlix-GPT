@@ -16,10 +16,10 @@ function MainContainer() {
 
   return (
     <div>
-        
+        <div className='md:p-0'>
         <VideoTitle title={title} overview={overview}/>
         <BackgroundVideo movieId={id} />
-        
+        </div>
     </div>
   )
 }

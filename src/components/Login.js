@@ -80,13 +80,13 @@ const handleSubmitClick = () => {
     <div>
         <Header />
       <div className='absolute'>
-         <img 
+         <img className='h-screen object-cover md:w-screen'
             src={BACKGROUND_IMAGE_URL}
             alt='background image logo'
          />
       </div>
-      <form onSubmit={(e) => e.preventDefault()} className='absolute w-3/12 my-36 mx-auto right-0 left-0 p-12 bg-black bg-opacity-80 text-white'>
-        <h1 className=' font-bold text-3xl'> {isSignInForm ? "Sign In" : "Sign Up"}</h1>
+      <form onSubmit={(e) => e.preventDefault()} className='absolute w-screen md:w-3/12 my-36 mx-auto right-0 left-0 p-12 bg-black bg-opacity-80 text-white'>
+        <h1 className='font-bold text-3xl text-center'> {isSignInForm ? "Sign In" : "Sign Up"}</h1>
         {!isSignInForm && (
         <input 
         ref={name}
@@ -100,7 +100,7 @@ const handleSubmitClick = () => {
         
         <p className='text-red-600 font-bold'>{validateMessage}</p>
         <button className='p-3 my-3 bg-red-700 w-full rounded-lg' onClick={handleSubmitClick}> {isSignInForm ? "Sign In" : "Sign Up"}</button>
-        <p className='p-4 my-4 text-white cursor-pointer' onClick={changeToSignUpForm}> {isSignInForm ? "New to Netflix ? Sign Up now" : "Allready Registered. Please Sign In"}</p>
+        <p className='text-center p-4 my-4 text-white cursor-pointer' onClick={changeToSignUpForm}> {isSignInForm ? "New to Netflix ? Sign Up now" : "Allready Registered. Please Sign In"}</p>
       </form>
     </div>   
   )

@@ -63,9 +63,9 @@ const Header = () => {
   
 
   return (
-    <div className='absolute w-screen px-4 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
-    <div className='' > 
-        <img className='w-44'
+    <div className='w-screen px-4 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between bg-black'>
+    <div className='mx-auto md:mx-0' > 
+        <img className='w-36 md:w-44'
           src={Logo}
           alt='header-logo'
         />
@@ -74,15 +74,15 @@ const Header = () => {
       {showGPTSearch && <select className='p-1 bg-black text-white mr-5' onChange={handleLanguageChange}>
         {SUPPORTED_LANGUAGES.map(lang => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option> )}
       </select>}
-    <button className='flex font-bold p-2 px-8 mt-0 mr-16 bg-purple-600 hover:bg-purple-900' onClick={toggleEvent}>{!searchGPT ? "NetflixGPT" : "Browse"} </button>
-
-    <span className='flex'> {"Hello..  " +user.displayName} 
+    <button className='flex font-bold p-2 px-8 mt-4 md:mt-0 mr-16 bg-purple-600 hover:bg-purple-900' onClick={toggleEvent}>{!searchGPT ? "NetflixGPT" : "Browse"} </button>
+    <div className='flex'>
+    <span className='flex flex-col md:flex-row'> {"Hello..  " +user.displayName} 
     <button className='flex' onClick={handleSignOut}>
-        <img className='w-40'
+        <img className='w-40 h- md:h-10'
           src= {SignOut}
           alt='sign-out'
         />
-    </button></span>
+    </button></span></div>
     </div>
 }
     </div>
